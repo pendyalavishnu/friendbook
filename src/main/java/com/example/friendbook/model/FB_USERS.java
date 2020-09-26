@@ -15,7 +15,7 @@ import java.time.Instant;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-public class User {
+public class FB_USERS {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     public long num_user_id;
@@ -27,5 +27,8 @@ public class User {
     @NotEmpty(message = "Email is required")
     private String txt_email;
     private Instant created;
-    private boolean enabled;
+    private boolean flg_logged_in;
+    private int num_max_login_windows;
+    private boolean flg_allow_multiple_login;
+
 }
