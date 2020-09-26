@@ -1,6 +1,6 @@
 package com.example.friendbook.model;
 
-import com.sun.javafx.geom.transform.Identity;
+//import com.sun.javafx.geom.transform.Identity;
 import org.hibernate.annotations.GeneratorType;
 
 import javax.persistence.Entity;
@@ -18,14 +18,14 @@ import static javax.persistence.GenerationType.IDENTITY;
 public class User {
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    public long userId;
+    public long num_user_id;
     @NotBlank(message = "Username is required")
-    private String username;
+    private String txt_username;
     @NotBlank(message = "Password is required")
-    private String password;
+    private String txt_password;
     @Email
     @NotEmpty(message = "Email is required")
-    private String email;
+    private String txt_email;
     private Instant created;
     private boolean enabled;
 }
