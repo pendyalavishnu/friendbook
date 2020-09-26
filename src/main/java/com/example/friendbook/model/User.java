@@ -6,6 +6,7 @@ import org.hibernate.annotations.GeneratorType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
@@ -15,7 +16,8 @@ import java.time.Instant;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-public class FB_USERS {
+@Table(name = "users")
+public class User {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     public long num_user_id;
