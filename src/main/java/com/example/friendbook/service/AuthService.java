@@ -1,5 +1,6 @@
 package com.example.friendbook.service;
 
+import com.example.friendbook.dto.LoginRequest;
 import com.example.friendbook.dto.RegisterRequest;
 import com.example.friendbook.exception.SpringFriendbookException;
 import com.example.friendbook.model.NotificationEmail;
@@ -9,6 +10,10 @@ import com.example.friendbook.repository.UserRepository;
 import com.example.friendbook.repository.VerificationTokenRepository;
 import com.sun.jmx.remote.security.MBeanServerFileAccessController;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.BeanIds;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -30,9 +35,10 @@ public class AuthService {
     @Autowired
     MailService mail_service;
 
+
     public void verfifyAccount(String txt_token) {
         Optional<VerificationToken> verification_token = verification_token_repo.findByTxt_token(txt_token);
-        verification_token.orElseThrow(() -> new SpringFriendbookException("nvalid token"));
+        verification_token.orElseThrow(() -> new SpringFriendbookException("Invalid token"));
 //        if(verification_token == null){
 //            throw new SpringFriendbookException("Invalid token");
 //        }
@@ -72,4 +78,7 @@ public class AuthService {
 
     }
 
+    public void login(LoginRequest login_request) {
+
+    }
 }

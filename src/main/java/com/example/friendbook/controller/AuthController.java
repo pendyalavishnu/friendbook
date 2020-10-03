@@ -1,5 +1,6 @@
 package com.example.friendbook.controller;
 
+import com.example.friendbook.dto.LoginRequest;
 import com.example.friendbook.dto.RegisterRequest;
 import com.example.friendbook.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,4 +28,10 @@ public class AuthController {
         auth_service.verfifyAccount(txt_token);
         return new ResponseEntity<>("Verification Successful", HttpStatus.OK);
     }
+
+    //@PostMapping("/login"){
+    public void login(@RequestBody LoginRequest login_request){
+        auth_service.login(login_request);
+    }
+
 }
