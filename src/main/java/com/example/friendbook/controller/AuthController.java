@@ -1,5 +1,6 @@
 package com.example.friendbook.controller;
 
+
 import com.example.friendbook.dto.AuthenticationResponse;
 import com.example.friendbook.dto.LoginRequest;
 import com.example.friendbook.dto.RegisterRequest;
@@ -34,7 +35,5 @@ public class AuthController {
     public AuthenticationResponse login(@RequestBody LoginRequest login_request){
         return auth_service.login(login_request);
     }
-
-
 
 }

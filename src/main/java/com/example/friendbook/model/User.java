@@ -17,6 +17,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 @Table(name = "users")
 public class User {
+
     @Id
     @GeneratedValue(strategy = IDENTITY)
     public long num_user_id;
