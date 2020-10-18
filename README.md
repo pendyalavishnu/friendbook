@@ -18,20 +18,27 @@
 
 <h3> Resources Referred </h3>
 <ul> 
+    <li>
     <i>
         <a href="https://learngitbranching.js.org/">GIT tutorials </a>
          </i> 
-</ul>
-<ul> 
+</li>
+<li>
     <i>
         <a href="https://www.udemy.com/share/102gCYAEMac1tWR3wF/"> SpringBoot
         </a>
 </i>
-</ul>
-<ul> 
+</li>
+<li> 
     <i>
         <a href="https://www.youtube.com/watch?v=DLX62G4lc44"> React.js
         </a>
          </i>
-     </ul>
+     </li>
+      <i>
+        <a href="https://raw.githubusercontent.com/ksatria/MK-Design-Pattern/master/Ebook/Head%20First%20Design%20Patterns.pdf"> Design Patterns
+        </a>
+         </i>
+     </li>
+ </ul>
 
