@@ -4,14 +4,16 @@
 
 
 <h3>User Stories:</h3>
-    <ol>I can login to the web application</ol>
-    <ol>I can register my profile</ol>
-    <ol>I recieve an activation mail</ol>
-    <ol>I can create posts</ol>
-    <ol>I can view posts</ol>
-    <ol>I can delete posts</ol>
-    <ol>I can like posts</ol>
-    <ol>I can comment posts</ol
+    <ol>
+    <li>I can login to the web application</li>
+    <li>I can register my profile</li>
+    <li>I recieve an activation mail</li>
+    <li>I can create posts</li>
+    <li>I can view posts</li>
+    <li>I can delete posts</li>
+    <li>I can like posts</li>
+    <li>I can comment posts</li>
+    </ol>
 <h5> <i> Refer /shared/documents/initial_project_plan.xlsx for initial project plan </i> </h5>
 
 <h3> Resources Referred </h3>
