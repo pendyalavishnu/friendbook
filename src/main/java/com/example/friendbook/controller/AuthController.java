@@ -1,5 +1,6 @@
 package com.example.friendbook.controller;
 
+import com.example.friendbook.dto.AuthenticationResponse;
 import com.example.friendbook.dto.LoginRequest;
 import com.example.friendbook.dto.RegisterRequest;
 import com.example.friendbook.service.AuthService;
@@ -29,9 +30,11 @@ public class AuthController {
         return new ResponseEntity<>("Verification Successful", HttpStatus.OK);
     }
 
-    //@PostMapping("/login"){
-    public void login(@RequestBody LoginRequest login_request){
-        auth_service.login(login_request);
+    @PostMapping("/login")
+    public AuthenticationResponse login(@RequestBody LoginRequest login_request){
+        return auth_service.login(login_request);
     }
+
+
 
 }

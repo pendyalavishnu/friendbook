@@ -1,5 +1,6 @@
 package com.example.friendbook.service;
 
+import com.example.friendbook.dto.AuthenticationResponse;
 import com.example.friendbook.dto.LoginRequest;
 import com.example.friendbook.dto.RegisterRequest;
 import com.example.friendbook.exception.SpringFriendbookException;
@@ -8,12 +9,12 @@ import com.example.friendbook.model.User;
 import com.example.friendbook.model.VerificationToken;
 import com.example.friendbook.repository.UserRepository;
 import com.example.friendbook.repository.VerificationTokenRepository;
-import com.sun.jmx.remote.security.MBeanServerFileAccessController;
+import com.example.friendbook.security.JwtProvider;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.config.BeanIds;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -34,6 +35,10 @@ public class AuthService {
     VerificationTokenRepository verification_token_repo;
     @Autowired
     MailService mail_service;
+    @Autowired
+    AuthenticationManager authentication_manager;
+    @Autowired
+    private JwtProvider jwt_provider;
 
 
     public void verfifyAccount(String txt_token) {
@@ -78,7 +83,14 @@ public class AuthService {
 
     }
 
-    public void login(LoginRequest login_request) {
-
+    public AuthenticationResponse login(LoginRequest login_request) {
+        Authentication authenticate = authentication_manager.authenticate(new UsernamePasswordAuthenticationToken(login_request.getTxt_username(),
+                login_request.getTxt_password()));
+        SecurityContextHolder.getContext().setAuthentication(authenticate);
+        String txt_token = jwt_provider.generateToken(authenticate);
+        AuthenticationResponse auth_response =  new AuthenticationResponse();
+        auth_response.setAuthenticationToken(txt_token);
+        auth_response.setUsername(login_request.getTxt_username());
+        return auth_response;
     }
 }
