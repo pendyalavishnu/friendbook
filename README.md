@@ -35,6 +35,7 @@
         </a>
          </i>
      </li>
+     <li>
       <i>
         <a href="https://raw.githubusercontent.com/ksatria/MK-Design-Pattern/master/Ebook/Head%20First%20Design%20Patterns.pdf"> Design Patterns
         </a>
