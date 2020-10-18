@@ -1,7 +1,6 @@
 package com.example.friendbook.model;
 
 //import com.sun.javafx.geom.transform.Identity;
-import org.hibernate.annotations.GeneratorType;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,6 +32,30 @@ public class User {
     private boolean flg_logged_in;
     private int num_max_login_windows;
     private boolean flg_allow_multiple_login;
+    private boolean flg_is_enabled;
+
+    public boolean isFlg_is_enabled() {
+        return flg_is_enabled;
+    }
+
+    public void setFlg_is_enabled(boolean is_enbled) {
+        this.flg_is_enabled = is_enbled;
+    }
+
+    public User() {
+    }
+
+    public User(long num_user_id, @NotBlank(message = "Username is required") String txt_username, @NotBlank(message = "Password is required") String txt_password, @Email @NotEmpty(message = "Email is required") String txt_email, Instant created, boolean flg_logged_in, int num_max_login_windows, boolean flg_allow_multiple_login, boolean flg_is_enabled) {
+        this.num_user_id = num_user_id;
+        this.txt_username = txt_username;
+        this.txt_password = txt_password;
+        this.txt_email = txt_email;
+        this.created = created;
+        this.flg_logged_in = flg_logged_in;
+        this.num_max_login_windows = num_max_login_windows;
+        this.flg_allow_multiple_login = flg_allow_multiple_login;
+        this.flg_is_enabled = flg_is_enabled;
+    }
 
     public long getNum_user_id() {
         return num_user_id;
