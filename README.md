@@ -1,5 +1,5 @@
 <h1>
-<strong> FriendBook </strong>
+    <strong> FriendBook </strong>
 </h1>
 <h3>User Stories:</h3>
 <ol>
@@ -17,30 +17,37 @@
 <ul>
     <li>
         <i>
-        <a href="https://learngitbranching.js.org/">GIT tutorials </a>
+            <a href="https://learngitbranching.js.org/">GIT tutorials </a>
         </i>
     </li>
     <li>
         <i>
-        <a href="https://www.udemy.com/share/102gCYAEMac1tWR3wF/"> SpringBoot
-        </a>
+            <a href="https://www.udemy.com/share/102gCYAEMac1tWR3wF/"> SpringBoot
+            </a>
+        </i>1
+    </li>
+    <li>
+        <i>
+            <a href="https://www.youtube.com/watch?v=4UZrsTqkcW4"> React.js
+            </a>
         </i>
     </li>
     <li>
         <i>
-        <a href="https://www.youtube.com/watch?v=4UZrsTqkcW4"> React.js
-        </a>
+            <a href="https://www.youtube.com/watch?v=BwuLxPH8IDs"> Typescript </a>
         </i>
     </li>
     <li>
         <i>
-        <a href = "https://www.youtube.com/watch?v=BwuLxPH8IDs"> Typescript </a>
+            <a
+                href="https://raw.githubusercontent.com/ksatria/MK-Design-Pattern/master/Ebook/Head%20First%20Design%20Patterns.pdf">
+                Design Patterns
+            </a>
         </i>
     </li>
-    <li>
-        <i>
-        <a href="https://raw.githubusercontent.com/ksatria/MK-Design-Pattern/master/Ebook/Head%20First%20Design%20Patterns.pdf"> Design Patterns
-        </a>
-        </i>
-    </li>
+</ul>
+
+<h3> Other config </h3>
+<ul>
+    <a href="https://github.com/john-smilga/VS-CODE-SETUP"> <i>vscode config </i></a>
 </ul>
